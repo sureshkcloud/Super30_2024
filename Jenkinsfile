@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Fetch code from a GitHub public repository
-                git url: 'https://github.com/sureshkcloud/Super30_2024.git'
+                echo "Checkout code from https://github.com/sureshkcloud/Super30_2024.git"
             }
         }
 
