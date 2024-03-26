@@ -1,11 +1,6 @@
 pipeline {
     agent any
-
-    environment {
-        // Define environment variables
-        MAVEN_HOME = '/path/to/maven'
-    }
-
+    
     stages {
         stage('Checkout') {
             steps {
@@ -17,14 +12,14 @@ pipeline {
         stage('Build') {
             steps {
                 // Use Maven to compile the project
-                echo "${MAVEN_HOME}/bin/mvn clean package"
+                echo "clean package"
             }
         }
 
         stage('Test') {
             steps {
                 // Run unit tests with Maven
-                echo "${MAVEN_HOME}/bin/mvn test"
+                echo "test"
             }
         }
 
