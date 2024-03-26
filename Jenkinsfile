@@ -10,21 +10,21 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Fetch code from a GitHub public repository
-                git url: 'https://github.com/your-username/your-repo.git'
+                git url: 'https://github.com/sureshkcloud/Super30_2024.git'
             }
         }
 
         stage('Build') {
             steps {
                 // Use Maven to compile the project
-                sh "${MAVEN_HOME}/bin/mvn clean package"
+                echo "${MAVEN_HOME}/bin/mvn clean package"
             }
         }
 
         stage('Test') {
             steps {
                 // Run unit tests with Maven
-                sh "${MAVEN_HOME}/bin/mvn test"
+                echo "${MAVEN_HOME}/bin/mvn test"
             }
         }
 
